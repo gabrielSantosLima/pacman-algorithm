@@ -1,4 +1,4 @@
-from dfs import DFS
+from bfs import BFS
 from graph import Graph
 
 
@@ -23,7 +23,7 @@ def main():
 
     graph.print_vertices()
 
-    route = DFS(graph, v1)
+    route = BFS(graph, v1)
     for vertex in route:
         print(f"{vertex.ID}")
 

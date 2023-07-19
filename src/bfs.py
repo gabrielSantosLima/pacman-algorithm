@@ -3,7 +3,7 @@ from collections import deque
 from graph import Graph, Vertex
 
 
-def DFS(graph: Graph, origin: Vertex):
+def BFS(graph: Graph, origin: Vertex):
     discovered: dict[int, bool] = {}
     route: list[Vertex] = []
 
