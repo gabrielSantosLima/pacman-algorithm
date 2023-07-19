@@ -29,6 +29,7 @@ class Graph:
         new_vertex = Vertex(ID)
         self.vertices[self.length] = new_vertex
         self.length += 1
+        return new_vertex
 
     def get_vertex(self, ID: int):
         for vertex in self.vertices:
@@ -42,10 +43,16 @@ class Graph:
                 return
         source.vertices.append(target)
 
-    def remove_edge(self, ID: int):
+    def remove_edge(self, source: Vertex, target: Vertex):
+        source.vertices = list(filter(lambda vertex: vertex.ID != target.ID, source.vertices))
+
+    def remove_vertex(self, ID: int):
         if self.length == 0:
             return
-        self.vertices = list(filter(lambda vertex: vertex.ID == ID, self.vertices))
+        self.vertices = list(filter(lambda vertex: vertex == None or vertex.ID != ID, self.vertices))
+        for vertex in self.vertices:
+            if vertex is not None:
+                vertex.vertices = list(filter(lambda vertex: vertex.ID != ID, vertex.vertices))
 
     def print_vertices(self):
         for vertex in self.vertices:
