@@ -1,14 +1,14 @@
 import pygame
-from constants import *
+from Game.constants import *
 import numpy as np
-from animation import Animator
+from Game.animation import Animator
 
 BASETILEWIDTH = 16
 BASETILEHEIGHT = 16
 
 class Spritesheet(object):
     def __init__(self):
-        self.sheet = pygame.image.load("src\game\spritesheet.png").convert()
+        self.sheet = pygame.image.load("Game/spritesheet.png").convert()
         transcolor = self.sheet.get_at((0,0))
         self.sheet.set_colorkey(transcolor)
         width = int(self.sheet.get_width() / BASETILEWIDTH * TILEWIDTH)

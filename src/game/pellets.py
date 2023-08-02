@@ -1,6 +1,6 @@
 import pygame
-from vector import Vector2
-from constants import *
+from Game.vector import Vector2
+from Game.constants import *
 import numpy as np
 
 class Pellet(object):

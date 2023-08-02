@@ -1,14 +1,14 @@
 import pygame
 from pygame.locals import *
-from constants import *
-from pacman import Pacman 
-from nodes import NodeGroup
-from pellets import PelletGroup
-from fruit import Fruit
-from pauser import Pause
-from text import TextGroup
-from sprites import LifeSprites
-from sprites import MazeSprites
+from Game.constants import *
+from Game.pacman import Pacman
+from Game.nodes import NodeGroup
+from Game.pellets import PelletGroup
+from Game.fruit import Fruit
+from Game.pauser import Pause
+from Game.text import TextGroup
+from Game.sprites import LifeSprites
+from Game.sprites import MazeSprites
 
 class GameController(object):
     def __init__(self):
@@ -55,24 +55,24 @@ class GameController(object):
     
     def startGame(self):
         self.setBackground()
-        self.mazesprites = MazeSprites("src\game\maze1.txt")
+        self.mazesprites = MazeSprites("Game/maze1.txt")
         self.background = self.mazesprites.constructBackground(self.background, self.level%5)
-        self.nodes = NodeGroup("src\game\maze1.txt")
+        self.nodes = NodeGroup("Game/maze1.txt")
         self.nodes.setPortalPair((0,17), (27,17))
         homekey = self.nodes.createHomeNodes(11.5, 14)
         self.nodes.connectHomeNodes(homekey, (12,14), LEFT)
         self.nodes.connectHomeNodes(homekey, (15,14), RIGHT)
         self.pacman = Pacman(self.nodes.getNodeFromTiles(15, 26))
-        self.pellets = PelletGroup("src\game\maze1.txt")
+        self.pellets = PelletGroup("Game/maze1.txt")
         self.nodes.denyHomeAccess(self.pacman)
   
-    def update(self):
+    def update(self, directions):
         dt = self.clock.tick(30) / 1000.0
         self.textgroup.update(dt)
-        self.pacman.update(dt)
+        self.pacman.update(dt, directions)
         self.pellets.update(dt)
         if not self.pause.paused:
-            self.pacman.update(dt)       
+            self.pacman.update(dt, directions)
             if self.fruit is not None:
                 self.fruit.update(dt)
             self.checkPelletEvents()
@@ -146,9 +146,3 @@ class GameController(object):
             if self.pellets.isEmpty():
                 self.hideEntities()
                 self.pause.setPause(pauseTime=3, func=self.nextLevel)
-
-if __name__ == "__main__":
-    game = GameController()
-    game.startGame()
-    while True:
-        game.update()
