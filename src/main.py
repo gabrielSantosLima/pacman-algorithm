@@ -295,24 +295,38 @@ def main():
         vertex_list.append(vertex.ID)
         print(f"{vertex.ID}")
 
-    path1 =[]
+    path1 = []
     directions = []
     for x in range(len(vertex_list)):
         if x == len(vertex_list) - 1:
             break
         else:
             path = find_path(graph, vertex_list[x], vertex_list[x+1], path1)
-            if path != None:
+            if path is None:
+                path2 = find_path(graph, vertex_list[x], vertex_list[x+1])
+                for z in path2[1]:
+                    if z not in path1:
+                        path1.append(z)
+                if path2[0] not in directions:
+                    directions.append(path2[0])
+            else:
                 path1 = path[1]
-                for y in path[0]:
-                    directions.append(y)
+                if path[0] not in directions:
+                    directions.append(path[0])
+
+    final_d = []
+    for e in directions:
+        for o in e:
+            final_d.append(o)
+
+
 
     game = GameController()
     game.startGame()
-    for i in range(len(directions)):
+    for i in range(len(final_d)):
         while game.pacman.position.asTuple() not in game.nodes.nodesLUT.keys():
-            game.update(directions[i])
+            game.update(final_d[i])
         else:
-            game.update(directions[i+1])
+            game.update(final_d[i+1])
 
 main()
