@@ -5,31 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="622045b4-e15f-4f17-9360-eca41dfa7217" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/bfs.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/PressStart2P-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/animation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/constants.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/entity.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/fruit.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/maze1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/modes.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/nodes.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/pacman.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/pauser.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/pellets.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/run.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/sprites.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/spritesheet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/stack.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/text.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/vector.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graph.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bfs.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/bfs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/animation.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/animation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/entity.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/entity.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/fruit.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/fruit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/maze1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/maze1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/modes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/modes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/nodes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/nodes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/pacman.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/pacman.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/pauser.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/pauser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/pellets.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/pellets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/sprites.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/sprites.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/stack.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/stack.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/text.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/text.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/vector.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/vector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graph.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/graph.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,6 +57,29 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="pacman-algorithm-Integra-o" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

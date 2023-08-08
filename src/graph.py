@@ -43,11 +43,11 @@ class Graph:
                 return True
         return False
 
-    def add_edge(self, source: Vertex, target: Vertex, direction: str):
+    def add_edge(self, source: Vertex, target: Vertex, direction: str, weight: int):
         for vertex in source.vertices:
             if vertex[0].ID == target.ID:
                 return
-        source.vertices.append([target, direction])
+        source.vertices.append([target, direction, weight])
 
     def get_edges(self, source:Vertex):
         return source.vertices
