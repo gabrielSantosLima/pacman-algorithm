@@ -1,13 +1,13 @@
 class Vertex:
     ID: int
-    vertices: list['Vertex']
+    vertices: list['Vertex', str]
 
     def __init__(self, ID: int):
         self.ID = ID
         self.vertices = []
 
     def __get_vertex_id(self, vertex: 'Vertex'):
-        return vertex.ID
+        return vertex[0].ID
 
     def __str__(self) -> str:
         ids = list(map(self.__get_vertex_id, self.vertices))
@@ -34,14 +34,24 @@ class Graph:
     def get_vertex(self, ID: int):
         for vertex in self.vertices:
             if vertex.ID == ID:
-                return vertex
+                return vertex.vertices
         return None
 
-    def add_edge(self, source: Vertex, target: Vertex):
+    def has_key(self, ID: int):
+        for vertex in self.vertices:
+            if vertex.ID == ID:
+                return True
+        return False
+
+    def add_edge(self, source: Vertex, target: Vertex, direction: str, weight: int):
         for vertex in source.vertices:
-            if vertex.ID == target.ID:
+            if vertex[0].ID == target.ID:
                 return
-        source.vertices.append(target)
+        source.vertices.append([target, direction, weight])
+
+    def get_edges(self, source:Vertex):
+        return source.vertices
+
 
     def remove_edge(self, source: Vertex, target: Vertex):
         source.vertices = list(filter(lambda vertex: vertex.ID != target.ID, source.vertices))

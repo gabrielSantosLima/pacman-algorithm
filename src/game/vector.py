@@ -44,6 +44,13 @@ class Vector2(object):
     def asTuple(self):
         return self.x, self.y
 
+    def asList(self):
+        vector = []
+        vector.append(self.x)
+        vector.append(self.y)
+
+        return vector
+
     def asInt(self):
         return int(self.x), int(self.y)
     

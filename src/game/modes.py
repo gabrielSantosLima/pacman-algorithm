@@ -1,4 +1,4 @@
-from constants import *
+from Game.constants import *
 
 class MainMode(object):
     def __init__(self):

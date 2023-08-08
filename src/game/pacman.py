@@ -1,9 +1,9 @@
 import pygame
 from pygame.locals import *
-from vector import Vector2
-from constants import *
-from entity import Entity
-from sprites import PacmanSprites
+from Game.vector import Vector2
+from Game.constants import *
+from Game.entity import Entity
+from Game.sprites import PacmanSprites
 
 class Pacman(Entity):
     def __init__(self, node):
@@ -34,10 +34,10 @@ class Pacman(Entity):
     def setPosition(self):
         self.position = self.node.position.copy()
 
-    def update(self, dt):	
+    def update(self, dt, directions):
         self.sprites.update(dt)
         self.position += self.directions[self.direction]*self.speed*dt
-        direction = self.getValidKey()
+        direction = directions
         if self.overshotTarget():
             self.node = self.target
             if self.node.neighbors[PORTAL] is not None:
